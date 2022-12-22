@@ -76,15 +76,27 @@ JSON Config of how Quera should score submissions.
 Notes:
 - Tests names in `tests` field should have same name as they have in the test file.
 - Sum of scores get scaled to score you give it in Quera.
-- If your project just have one file for solution, you can add `can_submit_single_file` and `single_file_path` fields so users can also submit the solution file directly (They can still submit zip file), for example:
+- If your project just have one file for solution, you can add `can_submit_single_file` and `single_file_path` fields so users can also submit the solution file directly (They can still submit zip file), for example (frontend-cypress project):
 ```json
 {
   "version": 2,
   "tester_version": 2,
-  "solution_signature": "src/hooks/use-snake.js",
+  "solution_signature": "main.js",
   "can_submit_single_file": true,
-  "single_file_path": "src/hooks/use-snake.js"
-  // ...
+  "single_file_path": "main.js",
+  "packages": [
+    {
+      "name": "slider",
+      "score": [
+        10, 10
+      ],
+      "tests": [
+        "Slider Tests: slider should go forward and backward when next and prev button clicked",
+        "Slider Tests: slider should mirror when next and prev button clicked and reaches end"
+      ],
+      "aggregator": "sum"
+    }
+  ]
 }
 ```
 
