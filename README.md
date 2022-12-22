@@ -82,9 +82,9 @@ Notes:
   "version": 2,
   "tester_version": 2,
   "solution_signature": "src/hooks/use-snake.js",
-	"can_submit_single_file": true,
-	"single_file_path": "src/hooks/use-snake.js",
-  ...
+  "can_submit_single_file": true,
+  "single_file_path": "src/hooks/use-snake.js"
+  // ...
 }
 ```
 
