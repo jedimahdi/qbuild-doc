@@ -1,0 +1,17 @@
+{
+	"version": 2,
+	"tester_version": 2,
+	"solution_signature": "src/App.js",
+	"packages": [
+		{
+			"name": "test_counter",
+			"score": [
+				5
+			],
+			"tests": [
+				"should increment"
+			],
+			"aggregator": "sum"
+		}
+	]
+}

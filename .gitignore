@@ -1,0 +1,4 @@
+.qbuild
+package-lock.json
+templates/**/README.md
+dist
