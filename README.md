@@ -76,6 +76,17 @@ JSON Config of how Quera should score submissions.
 Notes:
 - Tests names in `tests` field should have same name as they have in the test file.
 - Sum of scores get scaled to score you give it in Quera.
+- If your project just have one file for solution, you can add `can_submit_single_file` and `single_file_path` fields so users can also submit the solution file directly (They can still submit zip file), for example:
+```json
+{
+  "version": 2,
+  "tester_version": 2,
+  "solution_signature": "src/hooks/use-snake.js",
+	"can_submit_single_file": true,
+	"single_file_path": "src/hooks/use-snake.js",
+  ...
+}
+```
 
 
 ### .qtest and .qsampletest
