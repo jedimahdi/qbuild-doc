@@ -1,0 +1,19 @@
+{
+	"version": 2,
+	"tester_version": 2,
+	"solution_signature": "main.js",
+	"can_submit_single_file": true,
+	"single_file_path": "main.js",
+	"packages": [
+		{
+			"name": "test_counter",
+			"score": [
+				10
+			],
+			"tests": [
+				"Tests: should increment"
+			],
+			"aggregator": "sum"
+		}
+	]
+}
