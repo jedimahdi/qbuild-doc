@@ -158,5 +158,77 @@ For example if you have file named `main.js` and you can make new file `main.nos
 
 This new file doesn't change anything about paths in other files.
 
+`main.js`:
+```javascript
+function main() {
+  const button = document.getElementById("counter");
+
+  let counter = 0;
+
+  button.addEventListener("click", () => {
+    counter++;
+    button.innerHTML = `${counter}`;
+  });
+}
+
+main()
+```
+
+`main.nosolution.js`:
+```javascript
+function main() {
+  const button = document.getElementById("counter");
+  // your solution here
+}
+
+main()
+```
+
+
 ### _q_solution_begin comment
-WIP
+You can add comments that distinguishes solutions and get removed in initial project.
+
+```
+
+// _q_solution_begin
+  ... Part of Solution ...
+// _q_end
+
+// _q_solution_begin
+  ... Part of Solution ...
+// _q_replace
+//  ... This will be uncommented & replaced ...
+// _q_end
+
+/* _q_test_begin */
+  ... Part of Test ...
+/* _q_replace */
+/*  ... This will be uncommented & replaced ... */
+/* _q_end */
+```
+
+`main.js`:
+```javascript
+function main() {
+  // _q_solution_begin
+  const button = document.getElementById("counter");
+
+  let counter = 0;
+
+  button.addEventListener("click", () => {
+    counter++;
+    button.innerHTML = `${counter}`;
+  });
+  // _q_replace
+  // const button = document.getElementById("counter");
+  // // your solution here
+  // _q_end
+}
+
+main()
+```
+
+Notes:
+- You can use _q_solution_begin without _q_replace.
+- code inside _q_replace should be commented so if you want to have comment in initial project you have to comment the line twice.
+- Examples in .nosolution extension and this part both result in same output.
