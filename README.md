@@ -74,8 +74,25 @@ JSON Config of how Quera should score submissions.
 - `aggregator`: Tells Quera how to treat scores. `sum` means sum of all scores is full score. This field has other values such as `min` and `max` but in very rare cases they are needed.
 
 Notes:
-- Tests names in `tests` field should have same name as they have in the test file.
 - Sum of scores get scaled to score you give it in Quera.
+- Tests names in `tests` field should have same name as they have in the test file. Examples of test name of different types of tests (test names are in comment below each):
+```javascript
+test("my test", () => {});
+// "my test"
+
+describe("my describe", () => {
+    it("my test 2", () => {});
+});
+// "my describe my test 2"
+
+describe("my describe 2", () => {
+  describe("my describe 3", () => {
+    test("my test 3", () => {});
+  });
+});
+// "my describe 2 my describe 3 my test 3"
+
+```
 - If your project just have one file for solution, you can add `can_submit_single_file` and `single_file_path` fields so users can also submit the solution file directly (They can still submit zip file), for example (frontend-cypress project):
 ```json
 {
