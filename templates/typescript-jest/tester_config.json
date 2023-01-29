@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "tester_version": 2,
+  "solution_signature": "src/index.ts",
+  "packages": [
+    {
+      "name": "app_test",
+      "score": [
+        5
+      ],
+      "tests": [
+        "greeting input type should be correct"
+      ],
+      "aggregator": "sum"
+    }
+  ]
+}
